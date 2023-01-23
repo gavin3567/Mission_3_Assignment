@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "EAuwGAMEBMDlr1ohIDLMYCIeEhahFBnUWO5Cy8oXfiHTu6EUYtVgHxKKHXy/N5gEuS9seKXqYvLxnPzO7NUEBw==",
+  "success": true,
+  "projectFilePath": "/Users/tweiler/Desktop/Information Systems/413/Driver/Driver/Driver.csproj",
+  "expectedPackageFiles": [
+    "/Users/tweiler/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "/Users/tweiler/.nuget/packages/microsoft.netcore.app.host.osx-x64/3.1.32/microsoft.netcore.app.host.osx-x64.3.1.32.nupkg.sha512",
+    "/Users/tweiler/.nuget/packages/microsoft.netcore.app.ref/3.1.0/microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
