@@ -57,8 +57,8 @@ namespace Driver
             //Start the game while loop
             while (winCondition != true) {
 
-
-                if(playerTurn == 1) {
+                // Ask each player in turn for their choice and update the game board array
+                if (playerTurn == 1) {
                     goodChoice = false;
                     while (goodChoice == false)
                     {
@@ -67,7 +67,7 @@ namespace Driver
                     Console.WriteLine("Choose where you want to place your X");
                     string userChoice = Console.ReadLine();
                     int choice = int.Parse(userChoice);
-                        if (positions[choice] != 'X' | positions[choice] != 'O')
+                        if (positions[choice] != 'X' && positions[choice] != 'O')
                         {
                             positions[choice] = 'X';
                             goodChoice = true;
@@ -85,7 +85,7 @@ namespace Driver
                         Console.WriteLine("Choose where you want to place your O");
                         string userChoice = Console.ReadLine();
                         int choice = int.Parse(userChoice);
-                        if (positions[choice] != 'X' | positions[choice] != 'O')
+                        if (positions[choice] != 'X' && positions[choice] != 'O')
                         {
                             positions[choice] = 'O';
                             goodChoice = true;
@@ -95,7 +95,7 @@ namespace Driver
 
                 Console.WriteLine("\n");
 
-                // Ask each player in turn for their choice and update the game board array
+
 
                 // Print the board by calling the method in the supporting class
 
@@ -124,4 +124,3 @@ namespace Driver
 
 // 1-9 options
 // Add a condition to allow the players to play again
-
