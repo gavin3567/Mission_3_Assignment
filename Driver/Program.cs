@@ -44,18 +44,84 @@ namespace Driver
             player2 = Console.ReadLine();
 
             // Welcome the user to the game
-            Console.WriteLine("Welcome " + player1 + " " + player2 + " to the online Tic-Tac-Toe game!");
+            Console.WriteLine("Welcome " + player1 + " and " + player2 + " to the online Tic-Tac-Toe game!");
 
-            // Ask each player in turn for their choice and update the game board array
+            // Generate random number to decide who goes first
+            // 1 represents Player One, 2 represents Player Two
+            Random random = new Random();
+            double playerTurn = random.Next(1, 3);
 
-            // Print the board by calling the method in the supporting class
+            bool winCondition = false;
+            bool goodChoice = false;
 
-            // Check for a winner by calling the method in the supporting class, and notify the players when a win has occurred and which player won the game
+            //Start the game while loop
+            while (winCondition != true) {
 
-            Board(positions);
+
+                if(playerTurn == 1) {
+                    goodChoice = false;
+                    while (goodChoice == false)
+                    {
+                    Console.WriteLine("It's " + player1 +  "'s turn");
+                    Board(positions);
+                    Console.WriteLine("Choose where you want to place your X");
+                    string userChoice = Console.ReadLine();
+                    int choice = int.Parse(userChoice);
+                        if (positions[choice] != 'X' | positions[choice] != 'O')
+                        {
+                            positions[choice] = 'X';
+                            goodChoice = true;
+                        }
+                    }
+                }
+
+
+                if (playerTurn == 2){
+                    goodChoice = false;
+                    while (goodChoice == false){
+
+                        Console.WriteLine("It's " + player2 + "'s turn");
+                        Board(positions);
+                        Console.WriteLine("Choose where you want to place your O");
+                        string userChoice = Console.ReadLine();
+                        int choice = int.Parse(userChoice);
+                        if (positions[choice] != 'X' | positions[choice] != 'O')
+                        {
+                            positions[choice] = 'O';
+                            goodChoice = true;
+                        }
+                    }
+                }
+
+                Console.WriteLine("\n");
+
+                // Ask each player in turn for their choice and update the game board array
+
+                // Print the board by calling the method in the supporting class
+
+                // Check for a winner by calling the method in the supporting class
+
+
+                for (int i = 0; i <= positions.Length - 1; i++)
+                {
+                    Console.WriteLine(positions[i]);
+                }
+
+                if(playerTurn == 1)
+                {
+                    playerTurn = 2;
+                } else
+                {
+                    playerTurn = 1;
+                }
+
+            }
+
+            // Notify the players when a win has occurred and which player won the game
         }
     }
 }
 
 // 1-9 options
+// Add a condition to allow the players to play again
 
